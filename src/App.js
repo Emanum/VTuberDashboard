@@ -1,4 +1,5 @@
 import './App.css';
+import VideoContainer from './components/VideoContainer.jsx'
 
 function App() {
   return (
@@ -15,12 +16,9 @@ function App() {
           </ul>
         </nav>
         <article>
-          <h3>List of live VTuber</h3>
-          <ul>
-            <li>VTuber1</li>
-            <li>VTuber2</li>
-            <li>VTuber3</li>
-          </ul>
+            <h2>List of live VTuber</h2>
+            <VideoContainer json={"data/hololive.json"}/>
+            <VideoContainer json={"data/nijisanji.json"}/>
         </article>
         <aside>
           <ul>
