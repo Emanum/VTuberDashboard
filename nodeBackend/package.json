@@ -1,13 +1,13 @@
 {
-  "name": "docker_web_app",
+  "name": "vtuberdashboard_node_backend",
   "version": "1.0.0",
   "description": "Node.js on Docker",
-  "author": "First Last <first.last@example.com>",
+  "author": "Manuel Eiweck manuel.eiweck@bkf.at",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.1"
+    "express": "^4.17.1"
   }
 }
