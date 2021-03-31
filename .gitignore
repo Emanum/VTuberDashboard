@@ -10,6 +10,7 @@ frontend/coverage
 
 # production
 frontend/build
+nodeBackend/dist
 
 # misc
 *.DS_Store
