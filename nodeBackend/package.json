@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Node.js on Docker",
   "author": "Manuel Eiweck manuel.eiweck@bkf.at",
-  "main": "server.js",
+  "main": "src/app.ts",
   "scripts": {
-    "start": "tsc && node ./dist/app.js",
+    "start": "tsc && node ./build/app.js",
     "debug": "export DEBUG=* && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
