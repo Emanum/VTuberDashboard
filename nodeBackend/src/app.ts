@@ -5,8 +5,10 @@ import * as winston from 'winston';
 import * as expressWinston from 'express-winston';
 import cors = require('cors');
 
-import {CommonRoutesConfig} from './common/common.routes.config';
-import {UsersRoutes} from './users/users.routes.config';
+import {CommonRoutesConfig} from './rest/common/common.routes.config';
+import {UsersRoutes} from './rest/users/users.routes.config';
+import {CreatorsRoutes} from './rest/creators/creators.routes.config';
+
 import debug from 'debug';
 
 const app: express.Application = express();
@@ -49,6 +51,7 @@ app.use(expressWinston.logger(loggerOptions));
 // here we are adding the UserRoutes to our array,
 // after sending the Express.js application object to have the routes added to our app!
 routes.push(new UsersRoutes(app));
+routes.push(new CreatorsRoutes(app));
 
 // this is a simple route to make sure everything is working properly
 app.get('/', (req: express.Request, res: express.Response) => {
