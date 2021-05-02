@@ -14,6 +14,16 @@ export class CreatorsRoutes extends CommonRoutesConfig {
     }
 
     configureRoutes() {
+        /**
+         * @openapi
+         * /creators:
+         *   get:
+         *     description: Gets all creators
+         *     responses:
+         *       200:
+         *         description: Returns a JSON array with creators.
+         *
+         */
         this.app.route(`/creators`)
             .get((req: express.Request, res: express.Response) => {
                 res.status(200).send(this.creatorService.getCreators());

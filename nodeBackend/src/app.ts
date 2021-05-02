@@ -5,6 +5,9 @@ import * as winston from 'winston';
 import * as expressWinston from 'express-winston';
 import cors = require('cors');
 
+import swaggerJsdoc from 'swagger-jsdoc';
+const swaggerUi = require('swagger-ui-express');
+
 import {CommonRoutesConfig} from './rest/common/common.routes.config';
 import {UsersRoutes} from './rest/users/users.routes.config';
 import {CreatorsRoutes} from './rest/creators/creators.routes.config';
@@ -22,6 +25,37 @@ app.use(express.json());
 
 // here we are adding middleware to allow cross-origin requests
 app.use(cors());
+
+const options: swaggerJsdoc.OAS3Options = {
+    definition: {
+        openapi: "3.0.0",
+        info: {
+            title: "VTuber Dashboard API",
+            version: "0.1.0",
+            description:
+                "VTuber Dashboard API",
+        },
+        servers: [
+            {
+                url: "http://localhost:3000",
+            },
+        ],
+    },
+    apis: ["./src/rest/creators/creators.routes.config.ts"],
+};
+
+const openapiSpecification = swaggerJsdoc(options);
+
+app.get('/api-docs.json', function(req, res) {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(openapiSpecification);
+});
+
+app.use(
+    "/api-docs",
+    swaggerUi.serve,
+    swaggerUi.setup(openapiSpecification)
+);
 
 // here we are preparing the expressWinston logging middleware configuration,
 // which will automatically log all HTTP requests handled by Express.js
