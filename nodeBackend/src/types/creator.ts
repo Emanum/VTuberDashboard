@@ -1,4 +1,4 @@
-export type Creator = {
+export interface Creator {
     name: string;
     platform: string;
     channelID: string;

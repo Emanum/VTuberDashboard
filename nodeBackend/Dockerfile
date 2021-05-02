@@ -16,6 +16,11 @@ RUN npm install
 # Bundle app source
 COPY src src/
 COPY tsconfig.json tsconfig.json
+COPY tsoa.json tsoa.json
+
+RUN npm run build
+
+COPY build build/
 
 EXPOSE 3000
 CMD [ "npm", "start" ]

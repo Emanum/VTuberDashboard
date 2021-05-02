@@ -6,9 +6,15 @@ This project is a personal playground for learning new frameworks and concepts, 
 
 Used technologies so far: 
 
-* Node - express.js
 * Docker
 * Swagger (Editor/UI/...)
+
+Backend:
+* Node - express.js
+* Typescript
+* tsoa OpenAPI/Swagger REST Controller - https://tsoa-community.github.io/docs/
+
+Frontend:
 * React 
 
 ## Motivation

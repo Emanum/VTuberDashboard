@@ -1,23 +1,24 @@
 import express = require('express');
-import * as http from 'http';
 
 import * as winston from 'winston';
 import * as expressWinston from 'express-winston';
 import cors = require('cors');
 
-import swaggerJsdoc from 'swagger-jsdoc';
-const swaggerUi = require('swagger-ui-express');
-
-import {CommonRoutesConfig} from './rest/common/common.routes.config';
-import {UsersRoutes} from './rest/users/users.routes.config';
-import {CreatorsRoutes} from './rest/creators/creators.routes.config';
+import { RegisterRoutes } from "../build/routes";
+import bodyParser from "body-parser";
+// import {
+//     generateRoutes,
+//     generateSpec,
+//     ExtendedRoutesConfig,
+//     ExtendedSpecConfig,
+// } from "tsoa";
+//
+// const swaggerUi = require('swagger-ui-express');
 
 import debug from 'debug';
 
 const app: express.Application = express();
-const server: http.Server = http.createServer(app);
 const port = 3000;
-const routes: Array<CommonRoutesConfig> = [];
 const debugLog: debug.IDebugger = debug('app');
 
 // here we are adding middleware to parse all incoming requests as JSON
@@ -26,36 +27,36 @@ app.use(express.json());
 // here we are adding middleware to allow cross-origin requests
 app.use(cors());
 
-const options: swaggerJsdoc.OAS3Options = {
-    definition: {
-        openapi: "3.0.0",
-        info: {
-            title: "VTuber Dashboard API",
-            version: "0.1.0",
-            description:
-                "VTuber Dashboard API",
-        },
-        servers: [
-            {
-                url: "http://localhost:3000",
-            },
-        ],
-    },
-    apis: ["./src/rest/creators/creators.routes.config.ts"],
-};
+// const options: swaggerJsdoc.OAS3Options = {
+//     definition: {
+//         openapi: "3.0.0",
+//         info: {
+//             title: "VTuber Dashboard API",
+//             version: "0.1.0",
+//             description:
+//                 "VTuber Dashboard API",
+//         },
+//         servers: [
+//             {
+//                 url: "http://localhost:3000",
+//             },
+//         ],
+//     },
+//     apis: ["./src/rest/creators/creators.routes.config.ts"],
+// };
 
-const openapiSpecification = swaggerJsdoc(options);
+// const openapiSpecification = swaggerJsdoc(options);
+//
+// app.get('/api-docs.json', function(req, res) {
+//     res.setHeader('Content-Type', 'application/json');
+//     res.send(openapiSpecification);
+// });
 
-app.get('/api-docs.json', function(req, res) {
-    res.setHeader('Content-Type', 'application/json');
-    res.send(openapiSpecification);
-});
-
-app.use(
-    "/api-docs",
-    swaggerUi.serve,
-    swaggerUi.setup(openapiSpecification)
-);
+// app.use(
+//     "/api-docs",
+//     swaggerUi.serve,
+//     swaggerUi.setup(openapiSpecification)
+// );
 
 // here we are preparing the expressWinston logging middleware configuration,
 // which will automatically log all HTTP requests handled by Express.js
@@ -82,19 +83,22 @@ if (process.env.DEBUG) {
 // initialize the logger with the above configuration
 app.use(expressWinston.logger(loggerOptions));
 
-// here we are adding the UserRoutes to our array,
-// after sending the Express.js application object to have the routes added to our app!
-routes.push(new UsersRoutes(app));
-routes.push(new CreatorsRoutes(app));
 
 // this is a simple route to make sure everything is working properly
 app.get('/', (req: express.Request, res: express.Response) => {
     res.status(200).send(`Server up and running!`)
 });
 
-server.listen(port, () => {
-    debugLog(`Server running at http://localhost:${port}`);
-    routes.forEach((route: CommonRoutesConfig) => {
-        debugLog(`Routes configured for ${route.getName()}`);
-    });
-});
+// Use body parser to read sent json payloads
+app.use(
+    bodyParser.urlencoded({
+        extended: true,
+    })
+);
+app.use(bodyParser.json());
+
+RegisterRoutes(app);
+
+app.listen(port, () =>
+    console.log(`Example app listening at http://localhost:${port}`)
+);

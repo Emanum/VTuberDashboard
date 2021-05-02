@@ -5,18 +5,21 @@
   "author": "Manuel Eiweck manuel.eiweck@bkf.at",
   "main": "src/app.ts",
   "scripts": {
-    "start": "tsc && node ./build/app.js",
+    "build": "tsoa spec-and-routes && tsc",
+    "start": "node build/app.js",
     "debug": "export DEBUG=* && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@types/swagger-jsdoc": "^6.0.0",
+    "@types/body-parser": "^1.19.0",
+    "@types/node": "^15.0.1",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "debug": "^4.3.1",
     "express": "^4.17.1",
     "express-winston": "^4.1.0",
-    "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
+    "tsoa": "^3.7.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {
