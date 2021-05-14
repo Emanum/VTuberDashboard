@@ -1,6 +1,6 @@
 export interface Creator {
     name: string;
-    platform: string;
+    platform: "youtube" | "twitch" | "custom";
     channelID: string;
 }
 

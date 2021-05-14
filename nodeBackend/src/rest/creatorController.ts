@@ -5,7 +5,7 @@ import {
     Route,
 } from "tsoa";
 import {CreatorService} from "../service/CreatorService";
-import {Creator} from "../types/creator";
+import {Creator} from "../model/creator";
 
 @Route("creators")
 export class CreatorController extends Controller {

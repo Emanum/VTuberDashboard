@@ -1,19 +1,21 @@
 import * as hololive from '../resources/hololive.json';
-import '../types/creator';
-import {Creator} from "../types/creator";
+import '../model/creator';
+import {Creator} from "../model/creator";
 
 export class CreatorService {
 
     getCreators() : Creator[]{
+        // @ts-ignore
         return hololive.creators;
     }
 
     getCreator(channelID: string) : Creator{
-         let result = hololive.creators.find(creator => creator.channelID == channelID);
+         // @ts-ignore
+        let result : Creator = hololive.creators.find(creator => creator.channelID == channelID);
          if(result != undefined){
              return result;
          }else{
-             return {name:"",channelID:"",platform:""};
+             return {name:"",channelID:"",platform:"custom"};
          }
     }
 
