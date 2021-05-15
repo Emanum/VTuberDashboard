@@ -2,9 +2,14 @@
   "name": "Hololive",
   "creators": [
     {
-      "name": "Houshou Marine",
+      "name": "Marine Ch. 宝鐘マリン",
       "platform": "youtube",
       "channelID": "UCCzUftO8KOVkV4wQG1vkUvg"
+    },
+    {
+      "name": "Shion Ch. 紫咲シオン",
+      "platform": "youtube",
+      "channelID": "UCXTpFs_3PqI41qX2d9tL2Rw"
     }
   ]
 }

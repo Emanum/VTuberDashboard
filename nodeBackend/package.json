@@ -8,7 +8,6 @@
     "prebuild": "del-cli --force build",
     "build": "tsoa spec-and-routes && tsc",
     "start": "node build/src/app.js",
-
     "predev": "del-cli --force build && tsoa spec-and-routes && tsc",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
     "debug": "export DEBUG=* && npm run start",
@@ -22,6 +21,7 @@
     "debug": "^4.3.1",
     "express": "^4.17.1",
     "express-winston": "^4.1.0",
+    "scrape-youtube": "^2.1.5",
     "swagger-ui-express": "^4.1.6",
     "tsoa": "^3.7.0",
     "winston": "^3.3.3"
