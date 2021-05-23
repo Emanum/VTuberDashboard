@@ -4,7 +4,7 @@ import {Creator} from "../model/creator";
 
 export class CreatorService {
 
-    getCreators() : Creator[]{
+    getHololiveCreators() : Creator[]{
         // @ts-ignore
         return hololive.creators;
     }

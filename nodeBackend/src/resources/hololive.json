@@ -2,14 +2,225 @@
   "name": "Hololive",
   "creators": [
     {
-      "name": "Marine Ch. 宝鐘マリン",
+      "name": "Tokino Sora",
+      "platform": "youtube",
+      "channelID": "UCp6993wxpyDPHUpavwDFqgg"
+    },
+    {
+      "name": "Roboco",
+      "platform": "youtube",
+      "channelID": "UCDqI2jOz0weumE8s7paEk6g"
+    },
+    {
+      "name": "Sakura Miko",
+      "platform": "youtube",
+      "channelID": "UC-hM6YJuNYVAmUWxeIr9FeA"
+    },
+    {
+      "name": "Hoshimachi Suisei",
+      "platform": "youtube",
+      "channelID": "UC5CwaMl1eIgY8h02uZw7u8A"
+    },
+    {
+      "name": "AZKi",
+      "platform": "youtube",
+      "channelID": "UC0TXe_LYZ4scaW2XMyi5_kw"
+    },
+    {
+      "name": "Yozora Mel",
+      "platform": "youtube",
+      "channelID": "UCD8HOxPs4Xvsm8H0ZxXGiBw"
+    },
+    {
+      "name": "Shirakami Fubuki",
+      "platform": "youtube",
+      "channelID": "UCdn5BQ06XqgXoAxIhbqw5Rg"
+    },
+    {
+      "name": "Natsuiro Matsuri",
+      "platform": "youtube",
+      "channelID": "UCQ0UDLQCjY0rmuxCDE38FGg"
+    },
+    {
+      "name": "Aki Rosenthal",
+      "platform": "youtube",
+      "channelID": "UCFTLzh12_nrtzqBPsTCqenA"
+    },
+    {
+      "name": "Akai Haato",
+      "platform": "youtube",
+      "channelID": "UC1CfXB_kRs3C-zaeTG3oGyg"
+    },
+
+    {
+      "name": "Minato Aqua",
+      "platform": "youtube",
+      "channelID": "UC1opHUrw8rvnsadT-iGp7Cg"
+    },
+    {
+      "name": "Nakiri Ayame",
+      "platform": "youtube",
+      "channelID": "UC7fk0CB07ly8oSl0aqKkqFg"
+    },
+    {
+      "name": "Murasaki Shion",
+      "platform": "youtube",
+      "channelID": "UCXTpFs_3PqI41qX2d9tL2Rw"
+    },
+    {
+      "name": "Yuzuki Choco",
+      "platform": "youtube",
+      "channelID": "UC1suqwovbL1kzsoaZgFZLKg"
+    },
+    {
+      "name": "Oozora Subaru",
+      "platform": "youtube",
+      "channelID": "UCvzGlP9oQwU--Y0r9id_jnA"
+    },
+    {
+      "name": "Shirakami Fubuki",
+      "platform": "youtube",
+      "channelID": "UCdn5BQ06XqgXoAxIhbqw5Rg"
+    },
+    {
+      "name": "Ookami Mio",
+      "platform": "youtube",
+      "channelID": "UCp-5t9SrOQwXMU7iIjQfARg"
+    },
+    {
+      "name": "Nekomata Okayu",
+      "platform": "youtube",
+      "channelID": "UCvaTdHTWBGv3MKj3KVqJVCw"
+    },
+    {
+      "name": "Inugami Korone",
+      "platform": "youtube",
+      "channelID": "UChAnqc_AY5_I3Px5dig3X1Q"
+    },
+    {
+      "name": "Usada Pekora",
+      "platform": "youtube",
+      "channelID": "UC1DCedRgGHBdm81E1llLhOQ"
+    },
+    {
+      "name": "Uruha Rushia",
+      "platform": "youtube",
+      "channelID": "UCl_gCybOJRIgOXw6Qb4qJzQ"
+    },
+    {
+      "name": "Shiranui Flare",
+      "platform": "youtube",
+      "channelID": "UCvInZx9h3jC2JzsIzoOebWg"
+    },
+    {
+      "name": "Shirogane Noel",
+      "platform": "youtube",
+      "channelID": "UCdyqAaZDKHXg4Ahi7VENThQ"
+    },
+    {
+      "name": "Houshou Marine",
       "platform": "youtube",
       "channelID": "UCCzUftO8KOVkV4wQG1vkUvg"
     },
     {
-      "name": "Shion Ch. 紫咲シオン",
+      "name": "Amane Kanata",
       "platform": "youtube",
-      "channelID": "UCXTpFs_3PqI41qX2d9tL2Rw"
+      "channelID": "UCZlDXzGoo7d44bwdNObFacg"
+    },
+    {
+      "name": "Tsunomaki Watame",
+      "platform": "youtube",
+      "channelID": "UCqm3BQLlJfvkTsX_hvm0UmA"
+    },
+    {
+      "name": "Kiryu Coco",
+      "platform": "youtube",
+      "channelID": "UCS9uQI-jC3DE0L4IpXyvr6w"
+    },
+    {
+      "name": "Tokoyami Towa",
+      "platform": "youtube",
+      "channelID": "UC1uv2Oq6kNxgATlCiez59hw"
+    },
+    {
+      "name": "Himemori Luna",
+      "platform": "youtube",
+      "channelID": "UCa9Y57gfeY0Zro_noHRVrnw"
+    },
+    {
+      "name": "Yukihana Lamy",
+      "platform": "youtube",
+      "channelID": "UCFKOVgVbGmX65RxO3EtH3iw"
+    },
+    {
+      "name": "Momosuzu Nene",
+      "platform": "youtube",
+      "channelID": "UCAWSyEs_Io8MtpY3m-zqILA"
+    },
+    {
+      "name": "Shishiro Botan",
+      "platform": "youtube",
+      "channelID": "UCUKD-uaobj9jiqB-VXt71mA"
+    },
+    {
+      "name": "Omaru Polka",
+      "platform": "youtube",
+      "channelID": "UCK9V2B22uJYu3N7eR_BT9QA"
+    },
+    {
+      "name": "Ayunda Risu",
+      "platform": "youtube",
+      "channelID": "UCOyYb1c43VlX9rc_lT6NKQw"
+    },
+    {
+      "name": "Moona Hoshinova",
+      "platform": "youtube",
+      "channelID": "UCP0BspO_AMEe3aQqqpo89Dg"
+    },
+    {
+      "name": "Airani Iofifteen",
+      "platform": "youtube",
+      "channelID": "UCAoy6rzhSf4ydcYjJw3WoVg"
+    },
+    {
+      "name": "Kureiji Ollie",
+      "platform": "youtube",
+      "channelID": "UCYz_5n-uDuChHtLo7My1HnQ"
+    },
+    {
+      "name": "Anya Melfissa",
+      "platform": "youtube",
+      "channelID": "UC727SQYUvx5pDDGQpTICNWg"
+    },
+    {
+      "name": "Pavolia Reine",
+      "platform": "youtube",
+      "channelID": "UChgTyjG-pdNvxxhdsXfHQ5Q"
+    },
+    {
+      "name": "Mori Calliope",
+      "platform": "youtube",
+      "channelID": "UCL_qhgtOy0dy1Agp8vkySQg"
+    },
+    {
+      "name": "Takanashi Kiara",
+      "platform": "youtube",
+      "channelID": "UCHsx4Hqa-1ORjQTh9TYDhww"
+    },
+    {
+      "name": "Ninomae Ina'nis",
+      "platform": "youtube",
+      "channelID": "UCMwGHR0BTZuLsmjY_NT5Pwg"
+    },
+    {
+      "name": "Gawr Gura",
+      "platform": "youtube",
+      "channelID": "UCoSrY_IQQVpmIRZ9Xf-y93g"
+    },
+    {
+      "name": "Watson Amelia",
+      "platform": "youtube",
+      "channelID": "UCyl1z3jo3XHR1riLFKG5UAg"
     }
   ]
 }

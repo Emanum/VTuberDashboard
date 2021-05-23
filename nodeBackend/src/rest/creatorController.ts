@@ -19,7 +19,7 @@ export class CreatorController extends Controller {
     @Get("")
     public async getCreators(
     ): Promise<Creator[]> {
-        return new CreatorService().getCreators();
+        return new CreatorService().getHololiveCreators();
     }
 
 }
