@@ -8,17 +8,19 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install -g typescript
 RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
 
+#RUN npm install react-scripts@3.4.1 -g
+
 # Bundle app source
 COPY src src/
-COPY tsconfig.json tsconfig.json
-COPY tsoa.json tsoa.json
+COPY public public/
 
 RUN npm run build
 
 EXPOSE 3000
-CMD [ "npm", "start" ]
+CMD ["npm", "start"]
+
+
