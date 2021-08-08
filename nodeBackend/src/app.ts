@@ -64,7 +64,7 @@ app.get('/', (req: express.Request, res: express.Response) => {
 RegisterRoutes(app);
 
 //init Swagger
-app.get('/api-docs.swagger', (req: express.Request, res: express.Response) => {
+app.get('/api-docs.json', (req: express.Request, res: express.Response) => {
     res.status(200).send(swagger)
 });
 

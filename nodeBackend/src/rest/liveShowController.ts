@@ -20,7 +20,7 @@ export class LiveShowController extends Controller {
     }
 
     @Get("hololive")
-    public async getHololiveCreators(): Promise<Show[]> {
+    public async getHololiveLiveshows(): Promise<Show[]> {
         return new Promise(resolve => {
             let liveVideosList: Promise<Show[]>[] = this.youtubeService.getLiveVideosList(this.hololiveIDs);
             Promise.all(liveVideosList).then(promiseList => {
@@ -36,7 +36,7 @@ export class LiveShowController extends Controller {
     }
 
     @Get("{channelID}")
-    public async getCreatorByID(
+    public async getLiveShowsByChannelID(
         @Path() channelID: string
     ): Promise<Show[]> {
         return this.youtubeService.getLiveVideos(channelID);
